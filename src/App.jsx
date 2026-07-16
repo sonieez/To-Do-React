@@ -23,6 +23,11 @@ function App() {
     setTasks(t => t.filter(task => task.id !== taskId));
   }
   
+  function editTask(taskId, newName) {
+    setTasks(t => t.map((task) => {
+      return (task.id === taskId) ? {...task, name: newName} : task
+    }))
+  }
   
   return(
     <div className="container">
@@ -32,7 +37,7 @@ function App() {
       <button className='add-button' onClick={addTask}>Add</button>
 
       <div className='tasks'>
-        {tasks.map(task => <TaskCard task={task} key={task.id} onDelete={deleteTask}/>)}
+        {tasks.map(task => <TaskCard task={task} key={task.id} onDelete={deleteTask} onEdit={editTask}/>)}
       </div>
       
     </div>

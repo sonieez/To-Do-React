@@ -1,9 +1,8 @@
 import './App.css'
 import { useState } from 'react';
+import TaskCard from './TaskCard.jsx';
 
 function App() {
-
-  //const [tasks, setTasks] = useState([{id: 1, name: 'task1'}, {id: 2, name: 'task2'}, {id: 3, name: 'task3'}]);
   const [tasks, setTasks] = useState(['task1','task2','task3']);
   const [taskInput, setTaskInput] = useState('');
 
@@ -12,28 +11,6 @@ function App() {
   }
   function addTask() {
     setTasks([...tasks, taskInput]);
-  }
-
-  function TaskCard({task}) {
-    const [isDone, setIsDone] = useState(false);
-
-    function handleDone() {
-      setIsDone(isDone ? false : true);
-    }
-    function handleEdit() {
-
-    }
-    function handleDelete() {
-
-    }
-    return(
-      <div className='task'>
-        <button className='done-button' onClick={handleDone}>{isDone ? "done" : "not done"}</button>
-        {task}
-        <button className='edit-button' onClick={handleEdit}>Edit</button>
-        <button className='delete-button' onClick={handleDelete}>Delete</button>
-      </div>
-    )
   }
   
   return(

@@ -30,17 +30,27 @@ function App() {
   }
   
   return(
-    <div className="container">
-      
-      <input className='input' placeholder='Enter a task' value={taskInput} onChange={handleTaskInput}/>
+    <div className="App">
 
-      <button className='add-button' onClick={addTask}>Add</button>
-
-      <div className='tasks'>
-        {tasks.map(task => <TaskCard task={task} key={task.id} onDelete={deleteTask} onEdit={editTask}/>)}
+      <div className='navigation-bar'>
+        <h1>To-Do App</h1>
       </div>
+
+      <div className="container">
+
+        <h2 className='header'>Tasks</h2>
       
+        <input className='input' placeholder='Enter a task' value={taskInput} onChange={handleTaskInput}/>
+
+        <button className='add-button' onClick={addTask}>Add</button>
+
+        <div className='tasks'>
+          {tasks.map(task => <TaskCard task={task} key={task.id} onDelete={deleteTask} onEdit={editTask}/>)}
+        </div>
+        
+      </div>
     </div>
+    
   )
 }
 

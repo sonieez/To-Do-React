@@ -1,16 +1,23 @@
-# React + Vite
+# To-Do App
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## 📃Description 
+A simple To-Do App where you can add, edit, mark done and delete tasks.
 
-Currently, two official plugins are available:
+## 🎮Features 
+- Add tasks with add button, or Enter.
+- Mark done (✔️) when you finished the task.
+- Edit the task name and press Enter. If you have change of heart, just press Esc to exit the edit mode.
+- View how many task you have and how many of them are done.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ⚙️Technologies 
+- React
+- JavaScript (ES6+)
+- CSS
+- Vite
 
-## React Compiler
+<hr>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🔗Open this link to view/use my project:
 
-## Expanding the Oxlint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+📸How it looks:

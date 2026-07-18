@@ -28,6 +28,11 @@ function App() {
       return (task.id === taskId) ? {...task, name: newName} : task
     }))
   }
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      addTask();
+    }
+  }
   
   return(
     <div className="App">
@@ -40,7 +45,8 @@ function App() {
 
         <h2 className='header'>Tasks</h2>
       
-        <input className='input' placeholder='Enter a task' value={taskInput} onChange={handleTaskInput}/>
+        <input className='input' placeholder='Enter a task' value={taskInput} 
+        onChange={handleTaskInput} onKeyDown={handleKeyDown}/>
 
         <button className='add-button' onClick={addTask}>Add</button>
 

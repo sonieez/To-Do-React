@@ -30,8 +30,11 @@ function TaskCard({task, onDelete, onEdit}) {
 
   return(
     <div className='task'>
-      <button className='done-button' onClick={handleDone}>{isDone ? "done" : "not done"}</button>
-      {isEditing ? <input onChange={handleTaskEdit} value={editedTask}/> : <span>{task.name}</span>}
+      <button className={`done-button ${isDone ? 'done' : 'not-done'}`} onClick={handleDone}></button>
+      {isEditing ? 
+      <input onChange={handleTaskEdit} value={editedTask}/>
+      :
+      <span className={isDone ? 'task-done' : ''}>{task.name}</span>}
       <button className='edit-button' onClick={handleEditButtonClick}>
         {isEditing ? "Save" : "Edit"}
       </button>

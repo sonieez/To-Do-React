@@ -18,6 +18,7 @@ A simple To-Do App where you can add, edit, mark done and delete tasks.
 <hr>
 
 🔗Open this link to view/use my project:
-
+https://to-do-app-soniez.vercel.app/
 
 📸How it looks:
+![ToDo App](screenrecord.gif)
